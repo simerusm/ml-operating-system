@@ -1,2 +1,4 @@
 .vscode
 hardware/binary
+*.bin
+*.img

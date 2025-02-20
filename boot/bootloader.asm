@@ -21,7 +21,7 @@ start:
     mov ch, 0       ; Cylinder number
     mov cl, 2       ; Sector number (2nd sector, after bootloader)
     mov dh, 0       ; Head number
-    mov dl, 0       ; Drive number (0 = floppy, 0x80 = HDD)
+    mov dl, 0x80    ; Use 0x80 for hard drive boot
     mov bx, 0x7E00  ; Load kernel to memory address 0x7E00
     int 0x13        ; BIOS disk interrupt
 
