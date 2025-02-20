@@ -1,8 +1,8 @@
 #!/bin/bash
 
-nasm -f bin bootloader.asm -o boot.bin
-nasm -f bin kernel.asm -o kernel.bin
-cat bootloader.bin kernel.bin > os.img
-qemu-system-i386 -drive format=raw,file=os.img
+nasm -f bin boot/bootloader.asm -o boot/boot.bin
+nasm -f bin boot/kernel.asm -o boot/kernel.bin
+cat boot/boot.bin boot/kernel.bin > os.img
+qemu-system-x86_64 -drive format=raw,file=os.img
 
 # you should see "hello world" in QEMU output
