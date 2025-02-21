@@ -2,3 +2,5 @@
 hardware/binary
 *.bin
 *.img
+*.elf
+*.o
